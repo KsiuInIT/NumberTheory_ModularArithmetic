@@ -1,3 +1,6 @@
+from math import sqrt
+from random import choice
+
 class Main:
     def __init__(self):
         self.i = True
