@@ -75,31 +75,44 @@ class Main:
 
     def third(self, a, b, m):
         print(3)
+        
+##        if A == 0:
+##            return B
+##        while B != 0:
+##            if A > B:
+##                A = A - B
+##            else:
+##                B = B - A
+##        return A
 
     def simple_numb(self, A, B):
-        print(4)
         
-        if A == 0:
-            return B
-        while B != 0:
-            if A > B:
-                A /= A - B
-            else:
-                B /= B - A
-            return A
-
-##        all_numbers = []
-##        for k in range(A, B + 1):
-##            if k != 1:
-##                all_numbers.add(k)
-##
-##        for l in all_numbers:
-##            
-##        
-##        q = input("Вивести одине число чи всі? (1/2) ")
-##        if q == "1":
-##            print(sum([i**i for i in range(1,1001)])%(10**10))
-##    
+        all_numbers = []
+        
+        if A > B:
+            A, B = B, A
+            
+        for k in range(A, B + 1):
+            if k != 1:
+                all_numbers.append(k)
+                
+        print(all_numbers)
+        
+        for l in all_numbers:
+            li = 2
+            while li <= sqrt(l):
+                if l % li == 0:
+                    all_numbers.remove(l)
+                li += 1
+            
+        
+        q = input("Вивести одне число чи всі? (1/2) ")
+        if q == "1":
+            return (choice(all_numbers))
+        elif q == "2":
+            return (all_numbers)
+        
+    
 
 if __name__ == "__main__":
     i = True
